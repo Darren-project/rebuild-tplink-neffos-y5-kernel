@@ -1,1 +1,1 @@
-cmd_drivers/media/i2c/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/media/i2c/built-in.o drivers/media/i2c/soc_camera/built-in.o 
+cmd_drivers/media/i2c/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/media/i2c/built-in.o drivers/media/i2c/soc_camera/built-in.o 

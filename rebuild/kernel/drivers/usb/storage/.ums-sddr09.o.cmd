@@ -1,1 +1,1 @@
-cmd_drivers/usb/storage/ums-sddr09.o := arm-linux-gnueabihf-ld -EL   -r -o drivers/usb/storage/ums-sddr09.o drivers/usb/storage/sddr09.o 
+cmd_drivers/usb/storage/ums-sddr09.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/usb/storage/ums-sddr09.o drivers/usb/storage/sddr09.o 

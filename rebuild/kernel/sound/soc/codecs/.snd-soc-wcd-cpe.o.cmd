@@ -1,1 +1,1 @@
-cmd_sound/soc/codecs/snd-soc-wcd-cpe.o := arm-linux-gnueabihf-ld -EL   -r -o sound/soc/codecs/snd-soc-wcd-cpe.o sound/soc/codecs/wcd_cpe_services.o sound/soc/codecs/wcd_cpe_core.o 
+cmd_sound/soc/codecs/snd-soc-wcd-cpe.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o sound/soc/codecs/snd-soc-wcd-cpe.o sound/soc/codecs/wcd_cpe_services.o sound/soc/codecs/wcd_cpe_core.o 

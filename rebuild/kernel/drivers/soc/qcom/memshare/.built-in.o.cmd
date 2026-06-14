@@ -1,1 +1,1 @@
-cmd_drivers/soc/qcom/memshare/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/soc/qcom/memshare/built-in.o drivers/soc/qcom/memshare/heap_mem_ext_v01.o drivers/soc/qcom/memshare/msm_memshare.o 
+cmd_drivers/soc/qcom/memshare/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/soc/qcom/memshare/built-in.o drivers/soc/qcom/memshare/heap_mem_ext_v01.o drivers/soc/qcom/memshare/msm_memshare.o 

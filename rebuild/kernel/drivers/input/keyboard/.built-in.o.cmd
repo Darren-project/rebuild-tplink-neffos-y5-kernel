@@ -1,1 +1,1 @@
-cmd_drivers/input/keyboard/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/input/keyboard/built-in.o drivers/input/keyboard/atkbd.o drivers/input/keyboard/gpio_keys.o 
+cmd_drivers/input/keyboard/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/input/keyboard/built-in.o drivers/input/keyboard/atkbd.o drivers/input/keyboard/gpio_keys.o 

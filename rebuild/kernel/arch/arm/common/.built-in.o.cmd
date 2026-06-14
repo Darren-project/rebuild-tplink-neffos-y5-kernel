@@ -1,1 +1,1 @@
-cmd_arch/arm/common/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o arch/arm/common/built-in.o arch/arm/common/firmware.o arch/arm/common/cpaccess.o 
+cmd_arch/arm/common/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o arch/arm/common/built-in.o arch/arm/common/firmware.o arch/arm/common/cpaccess.o 

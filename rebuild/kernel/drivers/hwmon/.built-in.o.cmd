@@ -1,1 +1,1 @@
-cmd_drivers/hwmon/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/hwmon/built-in.o drivers/hwmon/hwmon.o drivers/hwmon/qpnp-buck-current-monitor.o drivers/hwmon/qpnp-adc-voltage.o drivers/hwmon/qpnp-adc-common.o drivers/hwmon/qpnp-adc-current.o 
+cmd_drivers/hwmon/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/hwmon/built-in.o drivers/hwmon/hwmon.o drivers/hwmon/qpnp-buck-current-monitor.o drivers/hwmon/qpnp-adc-voltage.o drivers/hwmon/qpnp-adc-common.o drivers/hwmon/qpnp-adc-current.o 

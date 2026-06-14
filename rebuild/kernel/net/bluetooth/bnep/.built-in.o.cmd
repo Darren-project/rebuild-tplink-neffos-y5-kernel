@@ -1,1 +1,1 @@
-cmd_net/bluetooth/bnep/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o net/bluetooth/bnep/built-in.o net/bluetooth/bnep/bnep.o 
+cmd_net/bluetooth/bnep/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o net/bluetooth/bnep/built-in.o net/bluetooth/bnep/bnep.o 

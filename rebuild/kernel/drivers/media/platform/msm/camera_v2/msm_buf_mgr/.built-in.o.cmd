@@ -1,1 +1,1 @@
-cmd_drivers/media/platform/msm/camera_v2/msm_buf_mgr/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/media/platform/msm/camera_v2/msm_buf_mgr/built-in.o drivers/media/platform/msm/camera_v2/msm_buf_mgr/msm_generic_buf_mgr.o 
+cmd_drivers/media/platform/msm/camera_v2/msm_buf_mgr/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/media/platform/msm/camera_v2/msm_buf_mgr/built-in.o drivers/media/platform/msm/camera_v2/msm_buf_mgr/msm_generic_buf_mgr.o 

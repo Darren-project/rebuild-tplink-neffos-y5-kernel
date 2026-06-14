@@ -1,1 +1,1 @@
-cmd_fs/debugfs/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o fs/debugfs/built-in.o fs/debugfs/debugfs.o 
+cmd_fs/debugfs/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o fs/debugfs/built-in.o fs/debugfs/debugfs.o 

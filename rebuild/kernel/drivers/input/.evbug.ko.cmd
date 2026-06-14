@@ -1,1 +1,1 @@
-cmd_drivers/input/evbug.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o drivers/input/evbug.ko drivers/input/evbug.o drivers/input/evbug.mod.o
+cmd_drivers/input/evbug.ko := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  --fix-cortex-a53-843419 -o drivers/input/evbug.ko drivers/input/evbug.o drivers/input/evbug.mod.o

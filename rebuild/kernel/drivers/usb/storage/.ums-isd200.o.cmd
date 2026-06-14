@@ -1,1 +1,1 @@
-cmd_drivers/usb/storage/ums-isd200.o := arm-linux-gnueabihf-ld -EL   -r -o drivers/usb/storage/ums-isd200.o drivers/usb/storage/isd200.o 
+cmd_drivers/usb/storage/ums-isd200.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/usb/storage/ums-isd200.o drivers/usb/storage/isd200.o 

@@ -1,1 +1,1 @@
-cmd_kernel/cpu/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o kernel/cpu/built-in.o kernel/cpu/idle.o 
+cmd_kernel/cpu/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o kernel/cpu/built-in.o kernel/cpu/idle.o 

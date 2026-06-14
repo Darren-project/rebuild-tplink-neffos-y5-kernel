@@ -1,1 +1,1 @@
-cmd_drivers/thermal/thermal_sys.o := arm-linux-gnueabihf-ld -EL   -r -o drivers/thermal/thermal_sys.o drivers/thermal/thermal_core.o drivers/thermal/step_wise.o 
+cmd_drivers/thermal/thermal_sys.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/thermal/thermal_sys.o drivers/thermal/thermal_core.o drivers/thermal/step_wise.o 

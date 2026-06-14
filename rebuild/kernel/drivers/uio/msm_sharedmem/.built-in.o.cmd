@@ -1,1 +1,1 @@
-cmd_drivers/uio/msm_sharedmem/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/uio/msm_sharedmem/built-in.o drivers/uio/msm_sharedmem/msm_sharedmem.o drivers/uio/msm_sharedmem/remote_filesystem_access_v01.o drivers/uio/msm_sharedmem/sharedmem_qmi.o 
+cmd_drivers/uio/msm_sharedmem/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/uio/msm_sharedmem/built-in.o drivers/uio/msm_sharedmem/msm_sharedmem.o drivers/uio/msm_sharedmem/remote_filesystem_access_v01.o drivers/uio/msm_sharedmem/sharedmem_qmi.o 

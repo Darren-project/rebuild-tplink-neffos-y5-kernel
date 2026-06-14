@@ -1,1 +1,1 @@
-cmd_net/bluetooth/hidp/hidp.o := arm-linux-gnueabihf-ld -EL   -r -o net/bluetooth/hidp/hidp.o net/bluetooth/hidp/core.o net/bluetooth/hidp/sock.o 
+cmd_net/bluetooth/hidp/hidp.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o net/bluetooth/hidp/hidp.o net/bluetooth/hidp/core.o net/bluetooth/hidp/sock.o 

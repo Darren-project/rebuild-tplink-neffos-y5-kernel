@@ -1,1 +1,1 @@
-cmd_drivers/scsi/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/scsi/built-in.o drivers/scsi/scsi_mod.o drivers/scsi/scsi_tgt.o drivers/scsi/arm/built-in.o drivers/scsi/sd_mod.o drivers/scsi/sg.o drivers/scsi/ch.o 
+cmd_drivers/scsi/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/scsi/built-in.o drivers/scsi/scsi_mod.o drivers/scsi/scsi_tgt.o drivers/scsi/arm/built-in.o drivers/scsi/sd_mod.o drivers/scsi/sg.o drivers/scsi/ch.o 

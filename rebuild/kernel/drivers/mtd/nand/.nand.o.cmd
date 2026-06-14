@@ -1,1 +1,1 @@
-cmd_drivers/mtd/nand/nand.o := arm-linux-gnueabihf-ld -EL   -r -o drivers/mtd/nand/nand.o drivers/mtd/nand/nand_base.o drivers/mtd/nand/nand_bbt.o 
+cmd_drivers/mtd/nand/nand.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/mtd/nand/nand.o drivers/mtd/nand/nand_base.o drivers/mtd/nand/nand_bbt.o 

@@ -1,1 +1,1 @@
-cmd_net/key/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o net/key/built-in.o net/key/af_key.o 
+cmd_net/key/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o net/key/built-in.o net/key/af_key.o 

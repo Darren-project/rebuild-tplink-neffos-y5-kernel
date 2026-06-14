@@ -1,1 +1,1 @@
-cmd_sound/soc/codecs/audio-ext-clock.o := arm-linux-gnueabihf-ld -EL   -r -o sound/soc/codecs/audio-ext-clock.o sound/soc/codecs/audio-ext-clk.o 
+cmd_sound/soc/codecs/audio-ext-clock.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o sound/soc/codecs/audio-ext-clock.o sound/soc/codecs/audio-ext-clk.o 

@@ -1,1 +1,1 @@
-cmd_drivers/uio/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/uio/built-in.o drivers/uio/uio.o drivers/uio/msm_sharedmem/built-in.o 
+cmd_drivers/uio/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/uio/built-in.o drivers/uio/uio.o drivers/uio/msm_sharedmem/built-in.o 

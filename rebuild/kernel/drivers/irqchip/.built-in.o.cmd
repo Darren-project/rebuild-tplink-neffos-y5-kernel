@@ -1,1 +1,1 @@
-cmd_drivers/irqchip/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/irqchip/built-in.o drivers/irqchip/irqchip.o drivers/irqchip/irq-gic.o drivers/irqchip/irq-msm.o drivers/irqchip/msm_show_resume_irq.o 
+cmd_drivers/irqchip/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/irqchip/built-in.o drivers/irqchip/irqchip.o drivers/irqchip/irq-gic.o drivers/irqchip/irq-msm.o drivers/irqchip/msm_show_resume_irq.o 

@@ -1,1 +1,1 @@
-cmd_net/ipv4/netfilter/nf_nat_ipv4.o := arm-linux-gnueabihf-ld -EL   -r -o net/ipv4/netfilter/nf_nat_ipv4.o net/ipv4/netfilter/nf_nat_l3proto_ipv4.o net/ipv4/netfilter/nf_nat_proto_icmp.o 
+cmd_net/ipv4/netfilter/nf_nat_ipv4.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o net/ipv4/netfilter/nf_nat_ipv4.o net/ipv4/netfilter/nf_nat_l3proto_ipv4.o net/ipv4/netfilter/nf_nat_proto_icmp.o 

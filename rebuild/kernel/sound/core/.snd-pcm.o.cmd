@@ -1,1 +1,1 @@
-cmd_sound/core/snd-pcm.o := arm-linux-gnueabihf-ld -EL   -r -o sound/core/snd-pcm.o sound/core/pcm.o sound/core/pcm_native.o sound/core/pcm_lib.o sound/core/pcm_timer.o sound/core/pcm_misc.o sound/core/pcm_memory.o 
+cmd_sound/core/snd-pcm.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o sound/core/snd-pcm.o sound/core/pcm.o sound/core/pcm_native.o sound/core/pcm_lib.o sound/core/pcm_timer.o sound/core/pcm_misc.o sound/core/pcm_memory.o 

@@ -1,1 +1,1 @@
-cmd_usr/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o usr/built-in.o usr/initramfs_data.o 
+cmd_usr/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o usr/built-in.o usr/initramfs_data.o 

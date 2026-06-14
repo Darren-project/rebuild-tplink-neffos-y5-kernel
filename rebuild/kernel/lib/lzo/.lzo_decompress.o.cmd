@@ -1,1 +1,1 @@
-cmd_lib/lzo/lzo_decompress.o := arm-linux-gnueabihf-ld -EL   -r -o lib/lzo/lzo_decompress.o lib/lzo/lzo1x_decompress_safe.o 
+cmd_lib/lzo/lzo_decompress.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o lib/lzo/lzo_decompress.o lib/lzo/lzo1x_decompress_safe.o 

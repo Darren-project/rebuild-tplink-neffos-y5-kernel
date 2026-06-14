@@ -1,1 +1,1 @@
-cmd_drivers/net/ethernet/micrel/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/net/ethernet/micrel/built-in.o drivers/net/ethernet/micrel/ks8851.o 
+cmd_drivers/net/ethernet/micrel/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/net/ethernet/micrel/built-in.o drivers/net/ethernet/micrel/ks8851.o 

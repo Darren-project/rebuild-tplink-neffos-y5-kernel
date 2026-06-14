@@ -1,1 +1,1 @@
-cmd_drivers/net/wireless/wcnss/wcnsscore.o := arm-linux-gnueabihf-ld -EL   -r -o drivers/net/wireless/wcnss/wcnsscore.o drivers/net/wireless/wcnss/wcnss_wlan.o drivers/net/wireless/wcnss/qcomwlan_secif.o drivers/net/wireless/wcnss/wcnss_vreg.o 
+cmd_drivers/net/wireless/wcnss/wcnsscore.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/net/wireless/wcnss/wcnsscore.o drivers/net/wireless/wcnss/wcnss_wlan.o drivers/net/wireless/wcnss/qcomwlan_secif.o drivers/net/wireless/wcnss/wcnss_vreg.o 

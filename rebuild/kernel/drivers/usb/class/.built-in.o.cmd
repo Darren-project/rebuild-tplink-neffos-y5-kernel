@@ -1,1 +1,1 @@
-cmd_drivers/usb/class/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/usb/class/built-in.o drivers/usb/class/cdc-acm.o drivers/usb/class/ccid_bridge.o 
+cmd_drivers/usb/class/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/usb/class/built-in.o drivers/usb/class/cdc-acm.o drivers/usb/class/ccid_bridge.o 

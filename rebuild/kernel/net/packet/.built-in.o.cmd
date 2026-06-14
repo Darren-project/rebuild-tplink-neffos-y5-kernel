@@ -1,1 +1,1 @@
-cmd_net/packet/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o net/packet/built-in.o net/packet/af_packet.o 
+cmd_net/packet/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o net/packet/built-in.o net/packet/af_packet.o 

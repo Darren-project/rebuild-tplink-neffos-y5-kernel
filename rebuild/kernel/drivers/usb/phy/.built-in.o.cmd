@@ -1,1 +1,1 @@
-cmd_drivers/usb/phy/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/usb/phy/built-in.o drivers/usb/phy/phy.o drivers/usb/phy/of.o drivers/usb/phy/phy-msm-usb.o 
+cmd_drivers/usb/phy/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/usb/phy/built-in.o drivers/usb/phy/phy.o drivers/usb/phy/of.o drivers/usb/phy/phy-msm-usb.o 

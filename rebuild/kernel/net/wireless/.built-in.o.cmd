@@ -1,1 +1,1 @@
-cmd_net/wireless/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o net/wireless/built-in.o net/wireless/cfg80211.o net/wireless/wext-core.o net/wireless/wext-proc.o net/wireless/wext-spy.o net/wireless/wext-priv.o 
+cmd_net/wireless/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o net/wireless/built-in.o net/wireless/cfg80211.o net/wireless/wext-core.o net/wireless/wext-proc.o net/wireless/wext-spy.o net/wireless/wext-priv.o 

@@ -1,1 +1,1 @@
-cmd_drivers/staging/zsmalloc/zsmalloc.o := arm-linux-gnueabihf-ld -EL   -r -o drivers/staging/zsmalloc/zsmalloc.o drivers/staging/zsmalloc/zsmalloc-main.o 
+cmd_drivers/staging/zsmalloc/zsmalloc.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/staging/zsmalloc/zsmalloc.o drivers/staging/zsmalloc/zsmalloc-main.o 

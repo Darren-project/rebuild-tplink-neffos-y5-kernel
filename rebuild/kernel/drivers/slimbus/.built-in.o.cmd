@@ -1,1 +1,1 @@
-cmd_drivers/slimbus/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/slimbus/built-in.o drivers/slimbus/slimbus.o drivers/slimbus/slim-msm.o drivers/slimbus/slim-msm-ngd.o 
+cmd_drivers/slimbus/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/slimbus/built-in.o drivers/slimbus/slimbus.o drivers/slimbus/slim-msm.o drivers/slimbus/slim-msm-ngd.o 

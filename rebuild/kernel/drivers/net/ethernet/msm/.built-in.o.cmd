@@ -1,1 +1,1 @@
-cmd_drivers/net/ethernet/msm/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/net/ethernet/msm/built-in.o drivers/net/ethernet/msm/msm_rmnet_bam.o 
+cmd_drivers/net/ethernet/msm/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/net/ethernet/msm/built-in.o drivers/net/ethernet/msm/msm_rmnet_bam.o 

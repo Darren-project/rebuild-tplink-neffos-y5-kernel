@@ -1,1 +1,1 @@
-cmd_drivers/usb/storage/ums-jumpshot.o := arm-linux-gnueabihf-ld -EL   -r -o drivers/usb/storage/ums-jumpshot.o drivers/usb/storage/jumpshot.o 
+cmd_drivers/usb/storage/ums-jumpshot.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/usb/storage/ums-jumpshot.o drivers/usb/storage/jumpshot.o 

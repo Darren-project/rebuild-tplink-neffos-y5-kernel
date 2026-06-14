@@ -1,1 +1,1 @@
-cmd_drivers/usb/misc/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/usb/misc/built-in.o drivers/usb/misc/ehset.o 
+cmd_drivers/usb/misc/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/usb/misc/built-in.o drivers/usb/misc/ehset.o 

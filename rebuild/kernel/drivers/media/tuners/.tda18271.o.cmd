@@ -1,1 +1,1 @@
-cmd_drivers/media/tuners/tda18271.o := arm-linux-gnueabihf-ld -EL   -r -o drivers/media/tuners/tda18271.o drivers/media/tuners/tda18271-maps.o drivers/media/tuners/tda18271-common.o drivers/media/tuners/tda18271-fe.o 
+cmd_drivers/media/tuners/tda18271.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/media/tuners/tda18271.o drivers/media/tuners/tda18271-maps.o drivers/media/tuners/tda18271-common.o drivers/media/tuners/tda18271-fe.o 

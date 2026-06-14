@@ -1,1 +1,1 @@
-cmd_drivers/usb/host/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/usb/host/built-in.o drivers/usb/host/ehci-hcd.o drivers/usb/host/ehci-msm.o drivers/usb/host/ehci-msm2.o 
+cmd_drivers/usb/host/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/usb/host/built-in.o drivers/usb/host/ehci-hcd.o drivers/usb/host/ehci-msm.o drivers/usb/host/ehci-msm2.o 

@@ -1,1 +1,1 @@
-cmd_sound/soc/msm/snd-soc-hostless-pcm.o := arm-linux-gnueabihf-ld -EL   -r -o sound/soc/msm/snd-soc-hostless-pcm.o sound/soc/msm/msm-pcm-hostless.o 
+cmd_sound/soc/msm/snd-soc-hostless-pcm.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o sound/soc/msm/snd-soc-hostless-pcm.o sound/soc/msm/msm-pcm-hostless.o 

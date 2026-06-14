@@ -1,1 +1,1 @@
-cmd_net/ipc_router/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o net/ipc_router/built-in.o net/ipc_router/ipc_router_core.o net/ipc_router/ipc_router_socket.o net/ipc_router/ipc_router_security.o 
+cmd_net/ipc_router/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o net/ipc_router/built-in.o net/ipc_router/ipc_router_core.o net/ipc_router/ipc_router_socket.o net/ipc_router/ipc_router_security.o 

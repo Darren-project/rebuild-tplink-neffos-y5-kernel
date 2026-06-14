@@ -1,1 +1,1 @@
-cmd_net/netfilter/nfnetlink_queue.o := arm-linux-gnueabihf-ld -EL   -r -o net/netfilter/nfnetlink_queue.o net/netfilter/nfnetlink_queue_core.o 
+cmd_net/netfilter/nfnetlink_queue.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o net/netfilter/nfnetlink_queue.o net/netfilter/nfnetlink_queue_core.o 

@@ -1,1 +1,1 @@
-cmd_block/test-iosched.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o block/test-iosched.ko block/test-iosched.o block/test-iosched.mod.o
+cmd_block/test-iosched.ko := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  --fix-cortex-a53-843419 -o block/test-iosched.ko block/test-iosched.o block/test-iosched.mod.o

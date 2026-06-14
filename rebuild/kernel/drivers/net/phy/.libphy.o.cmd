@@ -1,1 +1,1 @@
-cmd_drivers/net/phy/libphy.o := arm-linux-gnueabihf-ld -EL   -r -o drivers/net/phy/libphy.o drivers/net/phy/phy.o drivers/net/phy/phy_device.o drivers/net/phy/mdio_bus.o 
+cmd_drivers/net/phy/libphy.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/net/phy/libphy.o drivers/net/phy/phy.o drivers/net/phy/phy_device.o drivers/net/phy/mdio_bus.o 

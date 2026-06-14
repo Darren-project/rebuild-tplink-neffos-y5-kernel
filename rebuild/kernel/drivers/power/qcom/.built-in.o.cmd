@@ -1,1 +1,1 @@
-cmd_drivers/power/qcom/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/power/qcom/built-in.o drivers/power/qcom/msm-pm.o drivers/power/qcom/pm-data.o drivers/power/qcom/pm-stats.o drivers/power/qcom/lpm-stats.o drivers/power/qcom/pm-boot.o 
+cmd_drivers/power/qcom/built-in.o :=  ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o drivers/power/qcom/built-in.o drivers/power/qcom/msm-pm.o drivers/power/qcom/pm-data.o drivers/power/qcom/pm-stats.o drivers/power/qcom/lpm-stats.o drivers/power/qcom/pm-boot.o 

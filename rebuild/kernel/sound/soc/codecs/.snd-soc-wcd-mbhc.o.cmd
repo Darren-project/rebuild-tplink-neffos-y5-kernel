@@ -1,1 +1,1 @@
-cmd_sound/soc/codecs/snd-soc-wcd-mbhc.o := arm-linux-gnueabihf-ld -EL   -r -o sound/soc/codecs/snd-soc-wcd-mbhc.o sound/soc/codecs/wcd-mbhc-v2.o 
+cmd_sound/soc/codecs/snd-soc-wcd-mbhc.o := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld   -r -o sound/soc/codecs/snd-soc-wcd-mbhc.o sound/soc/codecs/wcd-mbhc-v2.o 

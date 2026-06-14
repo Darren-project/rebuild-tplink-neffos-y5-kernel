@@ -1,1 +1,1 @@
-cmd_crypto/ansi_cprng.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o crypto/ansi_cprng.ko crypto/ansi_cprng.o crypto/ansi_cprng.mod.o
+cmd_crypto/ansi_cprng.ko := ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  --fix-cortex-a53-843419 -o crypto/ansi_cprng.ko crypto/ansi_cprng.o crypto/ansi_cprng.mod.o
