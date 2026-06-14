@@ -1,0 +1,252 @@
+/*
+* Mstar MSG22XX touchscreen driver
+*
+* Copyright (c) 2006-2012 MStar Semiconductor, Inc.
+*
+* Copyright (C) 2012 Bruce Ding <bruce.ding@mstarsemi.com>
+*
+* Copyright (c) 2014, The Linux Foundation. All rights reserved.
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+* GNU General Public License for more details.
+*/
+
+#ifndef __LINUX_MSTAR_MSG2238_TS_H__
+#define __LINUX_MSTAR_MSG2238_TS_H__
+
+#define TOUCH_DRIVER_VERSION "1.0.1"
+#define TOUCHSCREEN_INFO_MAX (30)
+
+/* Constant Value & Variable Definition*/
+#define MSTAR_VTG_MIN_UV        (2800000)
+#define MSTAR_VTG_MAX_UV        (3300000)
+#define MSTAR_I2C_VTG_MIN_UV    (1800000)
+#define MSTAR_I2C_VTG_MAX_UV    (1800000)
+
+#define MAX_BUTTONS              (4)
+#define FT_COORDS_ARR_SIZE       (4)
+#define MSTAR_FW_NAME_MAX_LEN    (50)
+
+#define MSTAR_CHIPTOP_REGISTER_BANK   (0x1E)
+#define MSTAR_CHIPTOP_REGISTER_ICTYPE (0xCC)
+
+/*
+* Note.
+* Please do not change the below setting.
+*/
+#define TPD_WIDTH    (2048)
+#define TPD_HEIGHT   (2048)
+
+#define PINCTRL_STATE_RELEASE       "pmx_ts_release"
+#define PINCTRL_STATE_INT_ACTIVE    "pmx_int_active"
+#define PINCTRL_STATE_INT_SUSPEND   "pmx_int_suspend"
+#define PINCTRL_STATE_RESET_ACTIVE  "pmx_reset_active"
+
+#define CHIP_TYPE_MSG22XX               (0x7A) // EX. MSG2238/MSG2256
+#define SLAVE_I2C_ID_DBBUS              (0xB2>>1)  //0x59  for MSG22XX
+#define DEMO_MODE_PACKET_LENGTH         (8)
+#define GESTURE_WAKEUP_PACKET_LENGTH    (6)
+#define PACKET_TYPE_GESTURE_WAKEUP      (0x50)
+
+#define TOUCH_SCREEN_X_MIN      (0)
+#define TOUCH_SCREEN_Y_MIN      (0)
+
+#define BIT0  (1<<0)  // 0x0001
+#define BIT1  (1<<1)  // 0x0002
+#define BIT2  (1<<2)  // 0x0004
+#define BIT3  (1<<3)  // 0x0008
+#define BIT4  (1<<4)  // 0x0010
+#define BIT5  (1<<5)  // 0x0020
+#define BIT6  (1<<6)  // 0x0040
+#define BIT7  (1<<7)  // 0x0080
+#define BIT8  (1<<8)  // 0x0100
+#define BIT9  (1<<9)  // 0x0200
+#define BIT10 (1<<10) // 0x0400
+#define BIT11 (1<<11) // 0x0800
+#define BIT12 (1<<12) // 0x1000
+#define BIT13 (1<<13) // 0x2000
+#define BIT14 (1<<14) // 0x4000
+#define BIT15 (1<<15) // 0x8000
+
+#define MAX_UPDATE_FIRMWARE_BUFFER_SIZE    (130) // 130KB. The size shall be large enough for stored any kind firmware size of MSG22XX(48.5KB)
+
+#define CONFIG_ENABLE_GESTURE_WAKEUP
+//#define CONFIG_SUPPORT_64_TYPES_GESTURE_WAKEUP_MODE
+
+#ifdef CONFIG_ENABLE_GESTURE_WAKEUP
+#define GESTURE_WAKEUP_MODE_DOUBLE_CLICK_FLAG     0x00000001    //0000 0000 0000 0000   0000 0000 0000 0001
+#define GESTURE_WAKEUP_MODE_UP_DIRECT_FLAG        0x00000002    //0000 0000 0000 0000   0000 0000 0000 0010
+#define GESTURE_WAKEUP_MODE_DOWN_DIRECT_FLAG      0x00000004    //0000 0000 0000 0000   0000 0000 0000 0100
+#define GESTURE_WAKEUP_MODE_LEFT_DIRECT_FLAG      0x00000008    //0000 0000 0000 0000   0000 0000 0000 1000
+#define GESTURE_WAKEUP_MODE_RIGHT_DIRECT_FLAG     0x00000010    //0000 0000 0000 0000   0000 0000 0001 0000
+#define GESTURE_WAKEUP_MODE_m_CHARACTER_FLAG      0x00000020    //0000 0000 0000 0000   0000 0000 0010 0000
+#define GESTURE_WAKEUP_MODE_W_CHARACTER_FLAG      0x00000040    //0000 0000 0000 0000   0000 0000 0100 0000
+#define GESTURE_WAKEUP_MODE_C_CHARACTER_FLAG      0x00000080    //0000 0000 0000 0000   0000 0000 1000 0000
+#define GESTURE_WAKEUP_MODE_e_CHARACTER_FLAG      0x00000100    //0000 0000 0000 0000   0000 0001 0000 0000
+#define GESTURE_WAKEUP_MODE_V_CHARACTER_FLAG      0x00000200    //0000 0000 0000 0000   0000 0010 0000 0000
+#define GESTURE_WAKEUP_MODE_O_CHARACTER_FLAG      0x00000400    //0000 0000 0000 0000   0000 0100 0000 0000
+#define GESTURE_WAKEUP_MODE_S_CHARACTER_FLAG      0x00000800    //0000 0000 0000 0000   0000 1000 0000 0000
+#define GESTURE_WAKEUP_MODE_Z_CHARACTER_FLAG      0x00001000    //0000 0000 0000 0000   0001 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE1_FLAG         0x00002000    //0000 0000 0000 0000   0010 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE2_FLAG         0x00004000    //0000 0000 0000 0000   0100 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE3_FLAG         0X00008000    //0000 0000 0000 0000   1000 0000 0000 0000
+
+#ifdef CONFIG_SUPPORT_64_TYPES_GESTURE_WAKEUP_MODE
+#define GESTURE_WAKEUP_MODE_RESERVE4_FLAG         0x00010000    //0000 0000 0000 0001   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE5_FLAG         0x00020000    //0000 0000 0000 0010   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE6_FLAG         0x00040000    //0000 0000 0000 0100   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE7_FLAG         0x00080000    //0000 0000 0000 1000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE8_FLAG         0x00100000    //0000 0000 0001 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE9_FLAG         0x00200000    //0000 0000 0010 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE10_FLAG        0x00400000    //0000 0000 0100 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE11_FLAG        0x00800000    //0000 0000 1000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE12_FLAG        0x01000000    //0000 0001 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE13_FLAG        0x02000000    //0000 0010 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE14_FLAG        0x04000000    //0000 0100 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE15_FLAG        0x08000000    //0000 1000 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE16_FLAG        0x10000000    //0001 0000 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE17_FLAG        0x20000000    //0010 0000 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE18_FLAG        0x40000000    //0100 0000 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE19_FLAG        0x80000000    //1000 0000 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE20_FLAG        0x00000001    //0000 0000 0000 0000   0000 0000 0000 0001
+#define GESTURE_WAKEUP_MODE_RESERVE21_FLAG        0x00000002    //0000 0000 0000 0000   0000 0000 0000 0010
+#define GESTURE_WAKEUP_MODE_RESERVE22_FLAG        0x00000004    //0000 0000 0000 0000   0000 0000 0000 0100
+#define GESTURE_WAKEUP_MODE_RESERVE23_FLAG        0x00000008    //0000 0000 0000 0000   0000 0000 0000 1000
+#define GESTURE_WAKEUP_MODE_RESERVE24_FLAG        0x00000010    //0000 0000 0000 0000   0000 0000 0001 0000
+#define GESTURE_WAKEUP_MODE_RESERVE25_FLAG        0x00000020    //0000 0000 0000 0000   0000 0000 0010 0000
+#define GESTURE_WAKEUP_MODE_RESERVE26_FLAG        0x00000040    //0000 0000 0000 0000   0000 0000 0100 0000
+#define GESTURE_WAKEUP_MODE_RESERVE27_FLAG        0x00000080    //0000 0000 0000 0000   0000 0000 1000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE28_FLAG        0x00000100    //0000 0000 0000 0000   0000 0001 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE29_FLAG        0x00000200    //0000 0000 0000 0000   0000 0010 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE30_FLAG        0x00000400    //0000 0000 0000 0000   0000 0100 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE31_FLAG        0x00000800    //0000 0000 0000 0000   0000 1000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE32_FLAG        0x00001000    //0000 0000 0000 0000   0001 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE33_FLAG        0x00002000    //0000 0000 0000 0000   0010 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE34_FLAG        0x00004000    //0000 0000 0000 0000   0100 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE35_FLAG        0X00008000    //0000 0000 0000 0000   1000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE36_FLAG        0x00010000    //0000 0000 0000 0001   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE37_FLAG        0x00020000    //0000 0000 0000 0010   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE38_FLAG        0x00040000    //0000 0000 0000 0100   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE39_FLAG        0x00080000    //0000 0000 0000 1000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE40_FLAG        0x00100000    //0000 0000 0001 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE41_FLAG        0x00200000    //0000 0000 0010 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE42_FLAG        0x00400000    //0000 0000 0100 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE43_FLAG        0x00800000    //0000 0000 1000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE44_FLAG        0x01000000    //0000 0001 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE45_FLAG        0x02000000    //0000 0010 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE46_FLAG        0x04000000    //0000 0100 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE47_FLAG        0x08000000    //0000 1000 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE48_FLAG        0x10000000    //0001 0000 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE49_FLAG        0x20000000    //0010 0000 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE50_FLAG        0x40000000    //0100 0000 0000 0000   0000 0000 0000 0000
+#define GESTURE_WAKEUP_MODE_RESERVE51_FLAG        0x80000000    //1000 0000 0000 0000   0000 0000 0000 0000
+#endif //CONFIG_SUPPORT_64_TYPES_GESTURE_WAKEUP_MODE
+
+#ifdef CONFIG_ENABLE_GESTURE_DEBUG_MODE
+#define GESTURE_DEBUG_MODE_PACKET_LENGTH    (128)
+#endif //CONFIG_ENABLE_GESTURE_DEBUG_MODE
+
+#ifdef CONFIG_ENABLE_GESTURE_INFORMATION_MODE
+#define GESTURE_WAKEUP_INFORMATION_PACKET_LENGTH    (128)
+#endif //CONFIG_ENABLE_GESTURE_INFORMATION_MODE
+
+#endif //CONFIG_ENABLE_GESTURE_WAKEUP
+
+/*
+* Note.
+* Please modify the name of the below .h depends on the vendor TP that you are using.
+*/
+#define MSG22XX_FIRMWARE_MAIN_BLOCK_SIZE    (48)  //48K
+#define MSG22XX_FIRMWARE_INFO_BLOCK_SIZE    (512) //512Byte
+
+/*
+* Note.
+* The following is sw id enum definition for MSG22XX.
+* 0x0000 and 0xFFFF are not allowed to be defined as SW ID.
+* SW_ID_UNDEFINED is a reserved enum value, do not delete it or modify it.
+* Please modify the SW ID of the below enum value depends on the TP vendor that you are using.
+*/
+typedef enum {
+	MSG22XX_SW_ID_BOOYI = 0x0001,
+	MSG22XX_SW_ID_DJN = 0x0002,
+	MSG22XX_SW_ID_UNDEFINED
+} Msg22xxSwId_e;
+
+#define UPDATE_FIRMWARE_RETRY_COUNT (2)
+
+#define MAX_ERASE_EFLASH_TIMES   (2) // for update firmware of MSG22xx
+
+#define TP_PRINT
+typedef enum
+{
+	EMEM_ALL = 0,
+	EMEM_MAIN,
+	EMEM_INFO
+} EmemType_e;
+
+struct msg22xx_ts_platform_data {
+	const char *name;
+	char fw_name[MSTAR_FW_NAME_MAX_LEN];
+	u8 fw_version_major;
+	u8 fw_version_minor;
+	u32 irq_gpio;
+	u32 irq_gpio_flags;
+	u32 reset_gpio;
+	u32 reset_gpio_flags;
+	u32 x_max;
+	u32 y_max;
+	u32 x_min;
+	u32 y_min;
+	u32 panel_minx;
+	u32 panel_miny;
+	u32 panel_maxx;
+	u32 panel_maxy;
+	u32 num_max_touches;
+	u8 ic_type;
+	u32 button_map[MAX_BUTTONS];
+	u32 num_buttons;
+	u32 hard_reset_delay_ms;
+	u32 post_hard_reset_delay_ms;
+	bool updating_fw;
+	u32 cam_avdd_gpio;
+};
+
+/* Touch Data Type Definition */
+struct touchPoint_t {
+	unsigned short x;
+	unsigned short y;
+};
+
+struct touchInfo_t {
+	struct touchPoint_t *point;
+	unsigned char count;
+	unsigned char keycode;
+};
+
+struct msg22xx_ts_data {
+	struct i2c_client *client;
+	struct input_dev *input_dev;
+	struct msg22xx_ts_platform_data *pdata;
+	struct regulator *vdd;
+	struct regulator *vcc_i2c;
+	bool suspended;
+#if defined(CONFIG_FB)
+	struct notifier_block fb_notif;
+#endif
+	struct pinctrl *ts_pinctrl;
+	struct pinctrl_state *pinctrl_state_release;
+	struct pinctrl_state *pinctrl_state_reset_active;
+	struct pinctrl_state *pinctrl_state_int_active;
+	struct pinctrl_state *pinctrl_state_int_suspend;
+	struct mutex ts_mutex;
+	struct touchInfo_t info;
+};
+
+#endif // __LINUX_MSTAR_MSG2238_TS_H__

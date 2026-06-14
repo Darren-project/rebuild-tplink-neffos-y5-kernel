@@ -1,0 +1,25 @@
+#
+# mstar touchscreen driver configuration
+#
+menuconfig TOUCHSCREEN_MSTAR_MSG22XX
+	bool "Mstar touchscreen"
+	default y
+	help
+	  Say Y here if you have a Synaptics DSX touchscreen connected
+	  to your system.
+
+	  If unsure, say N.
+
+if TOUCHSCREEN_MSTAR_MSG22XX
+
+config TOUCHSCREEN_MSTAR22XX
+	tristate "mstar touchscreens"
+	depends on I2C
+	help
+	  Say Y here if you have a mstar touchscreen.
+
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called msg22xx_ts.
+endif

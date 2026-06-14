@@ -1,0 +1,17 @@
+YAMAHA YAS537 3-axis electronic compass driver
+
+Required properties:
+
+ - compatible		: Should be "yamaha,yas537".
+ - reg				: i2c address of the device.
+ - vdd-supply		: Analog power supply needed to power up the device.
+ - vio-supply		: Digital IO power supply needed for IO and I2C.
+
+ Example:
+	yamaha@2e {
+		compatible = "yamaha,yas537";
+		reg = <0x2e>;
+		vdd-supply = <&pm8916_l17>;
+		vio-supply = <&pm8916_l6>;
+	};
+
