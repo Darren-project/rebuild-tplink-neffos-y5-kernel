@@ -1,0 +1,1 @@
+cmd_crypto/ansi_cprng.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o crypto/ansi_cprng.ko crypto/ansi_cprng.o crypto/ansi_cprng.mod.o

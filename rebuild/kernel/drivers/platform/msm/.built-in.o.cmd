@@ -1,0 +1,1 @@
+cmd_drivers/platform/msm/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/platform/msm/built-in.o drivers/platform/msm/msm_bus/built-in.o drivers/platform/msm/sps/built-in.o drivers/platform/msm/qpnp-power-on.o drivers/platform/msm/qpnp-vibrator.o drivers/platform/msm/avtimer.o drivers/platform/msm/qpnp-revid.o 

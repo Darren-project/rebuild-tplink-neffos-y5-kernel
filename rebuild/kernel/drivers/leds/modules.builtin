@@ -1,0 +1,5 @@
+kernel/drivers/leds/led-class.ko
+kernel/drivers/leds/leds-qpnp.ko
+kernel/drivers/leds/leds-gpio.ko
+kernel/drivers/leds/leds-msm-gpio-flash.ko
+kernel/drivers/leds/leds-aw2013.ko

@@ -1,0 +1,1 @@
+cmd_drivers/gpio/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/gpio/built-in.o drivers/gpio/devres.o drivers/gpio/gpiolib.o drivers/gpio/gpiolib-of.o drivers/gpio/qpnp-pin.o drivers/gpio/gpio-msm-smp2p.o drivers/gpio/gpio-msm-smp2p-test.o drivers/gpio/gpio-tp-board-id.o drivers/gpio/gpio-tp802-board-config.o 

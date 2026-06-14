@@ -1,0 +1,2 @@
+kernel/drivers/gpio/qpnp-pin.ko
+kernel/drivers/gpio/gpio-tp-board-id.ko

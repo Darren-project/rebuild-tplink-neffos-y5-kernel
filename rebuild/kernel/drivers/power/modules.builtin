@@ -1,0 +1,8 @@
+kernel/drivers/power/smb135x-charger.ko
+kernel/drivers/power/smb1360-charger-fg.ko
+kernel/drivers/power/smb358-charger.ko
+kernel/drivers/power/qpnp-vm-bms.ko
+kernel/drivers/power/batterydata-lib.ko
+kernel/drivers/power/batterydata-interface.ko
+kernel/drivers/power/qpnp-linear-charger.ko
+kernel/drivers/power/battery_current_limit.ko

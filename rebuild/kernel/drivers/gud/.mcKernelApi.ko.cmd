@@ -1,0 +1,1 @@
+cmd_drivers/gud/mcKernelApi.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o drivers/gud/mcKernelApi.ko drivers/gud/mcKernelApi.o drivers/gud/mcKernelApi.mod.o

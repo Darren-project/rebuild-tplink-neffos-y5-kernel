@@ -1,0 +1,1 @@
+cmd_block/test-iosched.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o block/test-iosched.ko block/test-iosched.o block/test-iosched.mod.o

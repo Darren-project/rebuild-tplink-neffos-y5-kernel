@@ -1,0 +1,1 @@
+cmd_drivers/usb/host/ice40-hcd.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o drivers/usb/host/ice40-hcd.ko drivers/usb/host/ice40-hcd.o drivers/usb/host/ice40-hcd.mod.o

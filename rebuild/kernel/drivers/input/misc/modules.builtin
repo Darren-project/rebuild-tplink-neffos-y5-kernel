@@ -1,0 +1,10 @@
+kernel/drivers/input/misc/uinput.ko
+kernel/drivers/input/misc/mmc3416x.ko
+kernel/drivers/input/misc/mpu6050.ko
+kernel/drivers/input/misc/akm8963.ko
+kernel/drivers/input/misc/akm09911.ko
+kernel/drivers/input/misc/ap3426.ko
+kernel/drivers/input/misc/bstclass.ko
+kernel/drivers/input/misc/bma2x2.ko
+kernel/drivers/input/misc/kionix_accel.ko
+kernel/drivers/input/misc/ltr559.ko

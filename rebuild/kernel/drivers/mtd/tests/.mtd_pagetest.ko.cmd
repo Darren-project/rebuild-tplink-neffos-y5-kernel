@@ -1,0 +1,1 @@
+cmd_drivers/mtd/tests/mtd_pagetest.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o drivers/mtd/tests/mtd_pagetest.ko drivers/mtd/tests/mtd_pagetest.o drivers/mtd/tests/mtd_pagetest.mod.o

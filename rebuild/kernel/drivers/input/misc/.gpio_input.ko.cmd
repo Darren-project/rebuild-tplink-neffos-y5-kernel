@@ -1,0 +1,1 @@
+cmd_drivers/input/misc/gpio_input.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o drivers/input/misc/gpio_input.ko drivers/input/misc/gpio_input.o drivers/input/misc/gpio_input.mod.o

@@ -1,0 +1,1 @@
+cmd_drivers/video/msm/mdss/mdss-mdp3.o := arm-linux-gnueabihf-ld -EL   -r -o drivers/video/msm/mdss/mdss-mdp3.o drivers/video/msm/mdss/mdp3.o drivers/video/msm/mdss/mdp3_dma.o drivers/video/msm/mdss/mdp3_ctrl.o drivers/video/msm/mdss/dsi_status_v2.o drivers/video/msm/mdss/mdp3_ppp.o drivers/video/msm/mdss/mdp3_ppp_hwio.o drivers/video/msm/mdss/mdp3_ppp_data.o 

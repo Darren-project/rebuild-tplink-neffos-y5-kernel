@@ -1,0 +1,1 @@
+cmd_drivers/input/touchscreen/gt1x/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/input/touchscreen/gt1x/built-in.o drivers/input/touchscreen/gt1x/gt1x.o drivers/input/touchscreen/gt1x/gt1x_generic.o drivers/input/touchscreen/gt1x/gt1x_update.o drivers/input/touchscreen/gt1x/gt1x_tools.o drivers/input/touchscreen/gt1x/gt1x_extents.o 

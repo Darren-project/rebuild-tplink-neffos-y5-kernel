@@ -1,0 +1,1 @@
+cmd_sound/soc/codecs/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o sound/soc/codecs/built-in.o sound/soc/codecs/audio-ext-clock.o sound/soc/codecs/snd-soc-wcd-mbhc.o sound/soc/codecs/snd-soc-wcd-cpe.o sound/soc/codecs/snd-soc-msm8909-wcd.o sound/soc/codecs/msm8916-wcd-irq.o sound/soc/codecs/snd-soc-wsa881x.o sound/soc/codecs/snd-soc-msm-stub.o 

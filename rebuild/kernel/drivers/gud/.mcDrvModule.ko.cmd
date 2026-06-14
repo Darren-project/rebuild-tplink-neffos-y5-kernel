@@ -1,0 +1,1 @@
+cmd_drivers/gud/mcDrvModule.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o drivers/gud/mcDrvModule.ko drivers/gud/mcDrvModule.o drivers/gud/mcDrvModule.mod.o

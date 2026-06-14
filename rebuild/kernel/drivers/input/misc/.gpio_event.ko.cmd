@@ -1,0 +1,1 @@
+cmd_drivers/input/misc/gpio_event.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o drivers/input/misc/gpio_event.ko drivers/input/misc/gpio_event.o drivers/input/misc/gpio_event.mod.o

@@ -1,0 +1,1 @@
+cmd_arch/arm/mach-msm/dma_test.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o arch/arm/mach-msm/dma_test.ko arch/arm/mach-msm/dma_test.o arch/arm/mach-msm/dma_test.mod.o

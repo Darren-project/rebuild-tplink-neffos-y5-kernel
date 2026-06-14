@@ -1,0 +1,1 @@
+cmd_drivers/mmc/card/mmc_block_test.ko := arm-linux-gnueabihf-ld -EL -r  -T /workspaces/rebuild-tplink-neffos-y5-kernel/rebuild/kernel/scripts/module-common.lds --build-id  -o drivers/mmc/card/mmc_block_test.ko drivers/mmc/card/mmc_block_test.o drivers/mmc/card/mmc_block_test.mod.o

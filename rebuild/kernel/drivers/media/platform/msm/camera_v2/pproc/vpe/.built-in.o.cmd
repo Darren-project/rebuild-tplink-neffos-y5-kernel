@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/msm/camera_v2/pproc/vpe/built-in.o :=  arm-linux-gnueabihf-ld -EL   -r -o drivers/media/platform/msm/camera_v2/pproc/vpe/built-in.o drivers/media/platform/msm/camera_v2/pproc/vpe/msm_vpe.o 

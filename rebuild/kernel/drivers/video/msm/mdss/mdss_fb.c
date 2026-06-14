@@ -554,7 +554,7 @@ static ssize_t mdss_fb_get_panel_info(struct device *dev,
 }
 
 /* [linchao start] Add to read hardware info */
-#define PANLE_INFO_MAX (20)
+#define PANEL_INFO_MAX (20)
 
 #if defined(CONFIG_TPLINK_PRODUCT_TP801)
 #define PANEL_DRIVER_VERSION "1.0.0"
@@ -574,20 +574,20 @@ static ssize_t mdss_fb_get_hw_info(struct device *dev,
 	int ret = 0;
 
 #if defined(CONFIG_TPLINK_PRODUCT_TP801) || defined(CONFIG_TPLINK_PRODUCT_TP803)
-	unsigned char panel_ic[2][PANLE_INFO_MAX] = {{"djn"}, {"booyi"}};
-	unsigned char panel_tpye[2][PANLE_INFO_MAX] = {{"ili9806e"}, {"otm8019a"}};
+	unsigned char panel_ic[2][PANEL_INFO_MAX] = {{"djn"}, {"booyi"}};
+	unsigned char panel_type[2][PANEL_INFO_MAX] = {{"ili9806e"}, {"otm8019a"}};
 #elif defined(CONFIG_TPLINK_PRODUCT_TP802)
-	unsigned char panel_ic[3][PANLE_INFO_MAX] = {{"djn"}, {"booyi"}, {"truly"}};
-	unsigned char panel_tpye[3][PANLE_INFO_MAX] = {{"ili9881c"}, {"hx8394f"}, {"r61350"}};
+	unsigned char panel_ic[3][PANEL_INFO_MAX] = {{"djn"}, {"booyi"}, {"truly"}};
+	unsigned char panel_type[3][PANEL_INFO_MAX] = {{"ili9881c"}, {"hx8394f"}, {"r61350"}};
 #else
 	return sprintf(buf, "don't support to read hardware info\n");
 #endif
 
-	if (strstr(pinfo->panel_name, &panel_tpye[0][0])) {
+	if (strstr(pinfo->panel_name, &panel_type[0][0])) {
 		vendor = 0;
-	} else if (strstr(pinfo->panel_name, &panel_tpye[1][0])) {
+	} else if (strstr(pinfo->panel_name, &panel_type[1][0])) {
 		vendor = 1;
-	} else if (strstr(pinfo->panel_name, &panel_tpye[2][0])) {
+	} else if (strstr(pinfo->panel_name, &panel_type[2][0])) {
 		vendor = 2;
 	}
 	pr_debug("%s pinfo->panel_name: %s\t vendor: %d!\n", __func__, pinfo->panel_name, vendor);
@@ -596,7 +596,7 @@ static ssize_t mdss_fb_get_hw_info(struct device *dev,
 			"type:\t%s\n"
 			"vendor:\t%s\n"
 			"driver_version:\t%s\n",
-			&panel_tpye[vendor][0],
+			&panel_type[vendor][0],
 			&panel_ic[vendor][0],
 			PANEL_DRIVER_VERSION);
 
