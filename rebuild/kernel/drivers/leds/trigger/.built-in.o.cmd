@@ -1,1 +1,1 @@
-cmd_drivers/leds/trigger/built-in.o :=  rm -f drivers/leds/trigger/built-in.o; arm-linux-gnueabihf-ar rcsD drivers/leds/trigger/built-in.o
+cmd_drivers/leds/trigger/built-in.o :=  rm -f drivers/leds/trigger/built-in.o; ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ar rcsD drivers/leds/trigger/built-in.o

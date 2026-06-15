@@ -1,1 +1,1 @@
-cmd_sound/isa/cs423x/built-in.o :=  rm -f sound/isa/cs423x/built-in.o; arm-linux-gnueabihf-ar rcsD sound/isa/cs423x/built-in.o
+cmd_sound/isa/cs423x/built-in.o :=  rm -f sound/isa/cs423x/built-in.o; ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ar rcsD sound/isa/cs423x/built-in.o

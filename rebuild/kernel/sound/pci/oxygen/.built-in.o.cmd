@@ -1,1 +1,1 @@
-cmd_sound/pci/oxygen/built-in.o :=  rm -f sound/pci/oxygen/built-in.o; arm-linux-gnueabihf-ar rcsD sound/pci/oxygen/built-in.o
+cmd_sound/pci/oxygen/built-in.o :=  rm -f sound/pci/oxygen/built-in.o; ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ar rcsD sound/pci/oxygen/built-in.o

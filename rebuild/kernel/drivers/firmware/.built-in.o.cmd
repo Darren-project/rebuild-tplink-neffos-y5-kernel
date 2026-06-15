@@ -1,1 +1,1 @@
-cmd_drivers/firmware/built-in.o :=  rm -f drivers/firmware/built-in.o; arm-linux-gnueabihf-ar rcsD drivers/firmware/built-in.o
+cmd_drivers/firmware/built-in.o :=  rm -f drivers/firmware/built-in.o; ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ar rcsD drivers/firmware/built-in.o

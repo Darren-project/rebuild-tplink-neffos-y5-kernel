@@ -1,1 +1,1 @@
-cmd_drivers/net/ethernet/smsc/built-in.o :=  rm -f drivers/net/ethernet/smsc/built-in.o; arm-linux-gnueabihf-ar rcsD drivers/net/ethernet/smsc/built-in.o
+cmd_drivers/net/ethernet/smsc/built-in.o :=  rm -f drivers/net/ethernet/smsc/built-in.o; ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ar rcsD drivers/net/ethernet/smsc/built-in.o

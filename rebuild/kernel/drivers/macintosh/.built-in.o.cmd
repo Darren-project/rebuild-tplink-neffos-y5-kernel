@@ -1,1 +1,1 @@
-cmd_drivers/macintosh/built-in.o :=  rm -f drivers/macintosh/built-in.o; arm-linux-gnueabihf-ar rcsD drivers/macintosh/built-in.o
+cmd_drivers/macintosh/built-in.o :=  rm -f drivers/macintosh/built-in.o; ../prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ar rcsD drivers/macintosh/built-in.o
